@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     background-color: #f4f0ff;
     color: #4b0082;
     margin: 0;
@@ -153,16 +153,16 @@ body {
 .back-home-button {
     background-color: #6a0dad;
     color: white;
-    padding: 10px 20px; /* Tamanho menor */
+    padding: 10px 20px; 
     border: none;
     border-radius: 5px;
-    font-size: 16px; /* Fonte menor */
+    font-size: 16px; 
     font-weight: bold;
     cursor: pointer;
     text-decoration: none;
-    position: fixed; /* Mantém o botão fixo no canto */
-    bottom: 20px; /* Distância do canto inferior */
-    right: 20px; /* Distância do canto direito */
+    position: fixed; 
+    bottom: 20px; 
+    right: 20px; 
 }
 
 .back-home-button:hover {
@@ -190,8 +190,10 @@ input[type="button"] {
 }
 
 input[type="button"]:hover {
-    background-color: #660066; /* Cor roxa mais escura ao passar o mouse */
+    background-color: #660066; 
 }
+
+/* Página Inicial */
 body {
     background-image: url('Imagem\ de\ fundo.webp');
     background-size: cover;
@@ -202,7 +204,7 @@ body {
 }
 
 .container {
-    background-color: rgba(255, 255, 255, 0.8); /* Fundo branco translúcido para destaque do formulário */
+    background-color: rgba(255, 255, 255, 0.8); 
     padding: 20px;
     border-radius: 10px;
     max-width: 600px;
@@ -211,7 +213,7 @@ body {
 }
 
 input[type="submit"], input[type="button"] {
-    background-color: #800080; /* Roxo elegante */
+    background-color: #800080; 
     color: white;
     border: none;
     padding: 10px 20px;
@@ -224,7 +226,7 @@ input[type="submit"], input[type="button"] {
 }
 
 input[type="submit"]:hover, input[type="button"]:hover {
-    background-color: #660066; /* Roxo mais escuro ao passar o mouse */
+    background-color: #660066; 
 }
 
 .back-home-button {
@@ -236,9 +238,9 @@ input[type="submit"]:hover, input[type="button"]:hover {
 }
 
 .back-home-button:hover {
-    color: #660066; /* Efeito de hover */
-}
+    color: #660066; 
 
+/* Imagens dos cachorrinhos*/
 .stickers {
     position: absolute;
     width: 100px;
@@ -256,4 +258,116 @@ input[type="submit"]:hover, input[type="button"]:hover {
 .sticker-dog-2 {
     bottom: 20px;
     right: 20px;
+}
+
+.endereco h3 {
+    color: #5c4a93;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.endereco p {
+    font-size: 16px;
+    color: #333;
+}
+
+.botao-reservar {
+    display: inline-block;
+    background-color: #6a4b9a;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.botao-reservar:hover {
+    background-color: #7e5bb8;
+}
+
+
+
+/* Estilo da página de hotelzinho */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+.topo {
+    background-color: #6a4b9a;
+    padding: 20px;
+    text-align: center;
+}
+
+.topo h1 {
+    color: #fff;
+    font-size: 28px;
+}
+
+/* Container do formulário */
+.formulario-container {
+    background-color: #fff;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-reserva label {
+    font-size: 16px;
+    color: #5c4a93;
+    font-weight: bold;
+}
+
+.form-reserva input,
+.form-reserva select,
+.form-reserva textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-reserva textarea {
+    height: 100px;
+    resize: none;
+}
+
+button {
+    background-color: #6a4b9a;
+    color: #fff;
+    padding: 15px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #7e5bb8;
+}
+
+/* Estilo responsivo */
+@media (max-width: 768px) {
+    .formulario-container {
+        padding: 20px;
+        margin: 20px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 10px;
+    }
+}
 }

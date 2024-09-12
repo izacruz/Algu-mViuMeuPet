@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva de Hotelzinho para Pets</title>
+    <link rel="stylesheet" href="estilo-hotelzinho.css">
+</head>
+<body>
+    <style>
+
+/* Estilo da página de hotelzinho */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.topo {
+    background-color: #6a4b9a;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.topo h1 {
+    color: #fff;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.topo p {
+    color: #ddd;
+    font-size: 18px;
+}
+
+/* Container do formulário */
+.formulario-container {
+    background-color: #fff;
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.form-reserva label {
+    display: block;
+    font-size: 16px;
+    color: #5c4a93;
+    font-weight: bold;
+    margin: 10px 0 5px;
+}
+
+.form-reserva input,
+.form-reserva select,
+.form-reserva textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-reserva textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+button {
+    background-color: #6a4b9a;
+    color: #fff;
+    padding: 15px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #7e5bb8;
+}
+
+/* Estilo responsivo */
+@media (max-width: 768px) {
+    .formulario-container {
+        padding: 20px;
+        margin: 20px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 10px;
+    }
+}
+
+    </style>
+    <header class="topo">
+        <h1>Reserve o Hotelzinho para seu Pet</h1>
+        <p>Por favor, responda às perguntas abaixo para garantir que seu pet tenha uma estadia tranquila e confortável.</p>
+    </header>
+
+    <main class="conteudo">
+        <div class="formulario-container">
+            <form action="processa-reserva.php" method="post" class="form-reserva">
+                
+                <!-- Informações Pessoais -->
+                <label for="nome">Seu Nome Completo:</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+
+                <label for="telefone">Telefone para Contato:</label>
+                <input type="text" id="telefone" name="telefone" placeholder="Digite seu telefone" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Digite seu email" required>
+
+                <!-- Informações do Pet -->
+                <label for="nome-pet">Nome do Pet:</label>
+                <input type="text" id="nome-pet" name="nome_pet" placeholder="Digite o nome do seu pet" required>
+
+                <label for="tipo-pet">Tipo de Pet:</label>
+                <select id="tipo-pet" name="tipo_pet" required>
+                    <option value="" disabled selected>Selecione</option>
+                    <option value="cachorro">Cachorro</option>
+                    <option value="gato">Gato</option>
+                    <option value="outro">Outro</option>
+                </select>
+
+                <label for="raca-pet">Raça do Pet:</label>
+                <input type="text" id="raca-pet" name="raca_pet" placeholder="Digite a raça do seu pet" required>
+
+                <label for="tamanho-pet">Tamanho do Pet:</label>
+                <select id="tamanho-pet" name="tamanho_pet" required>
+                    <option value="" disabled selected>Selecione</option>
+                    <option value="pequeno">Pequeno</option>
+                    <option value="medio">Médio</option>
+                    <option value="grande">Grande</option>
+                </select>
+
+                <label for="data-entrada">Data de Entrada:</label>
+                <input type="date" id="data-entrada" name="data_entrada" required>
+
+                <label for="data-saida">Data de Saída:</label>
+                <input type="date" id="data-saida" name="data_saida" required>
+
+                <!-- Informações de Saúde e Comportamento -->
+                <label for="problemas-saude">O pet possui algum problema de saúde?</label>
+                <textarea id="problemas-saude" name="problemas_saude" placeholder="Descreva se houver" required></textarea>
+
+                <label for="restricoes-alimentares">Seu pet tem restrições alimentares?</label>
+                <textarea id="restricoes-alimentares" name="restricoes_alimentares" placeholder="Descreva as restrições alimentares"></textarea>
+
+                <label for="sociabilidade">Seu pet é sociável com outros animais?</label>
+                <select id="sociabilidade" name="sociabilidade" required>
+                    <option value="" disabled selected>Selecione</option>
+                    <option value="sim">Sim</option>
+                    <option value="nao">Não</option>
+                </select>
+
+                <label for="observacoes">Observações adicionais:</label>
+                <textarea id="observacoes" name="observacoes" placeholder="Qualquer detalhe extra sobre seu pet"></textarea>
+
+                <!-- Valor da Diária e Pagamento -->
+                <label for="valor-diaria">Valor da Diária:</label>
+                <input type="text" id="valor-diaria" name="valor_diaria" value="R$ 100,00" readonly>
+
+                <label for="forma-pagamento">Forma de Pagamento:</label>
+                <select id="forma-pagamento" name="forma_pagamento" required>
+                    <option value="" disabled selected>Selecione</option>
+                    <option value="cartao-credito">Cartão de Crédito</option>
+                    <option value="cartao-debito">Cartão de Débito</option>
+                    <option value="boleto">Boleto Bancário</option>
+                    <option value="pix">PIX</option>
+                </select>
+
+                <!-- Botão de Envio -->
+                <button type="submit" onclick="confirmacaoReserva()">Confirmar Reserva</button>
+
+                <!-- Mensagem de Confirmação -->
+                <p id="mensagem-confirmacao" style="display: none; color: green; font-weight: bold; margin-top: 20px;">
+                    Reserva confirmada! Um email de confirmação será enviado para você.
+                </p>
+            </form>
+        </div>
+    </main>
+
+    <script>
+        function confirmacaoReserva() {
+            const mensagem = document.getElementById('mensagem-confirmacao');
+            mensagem.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
