@@ -371,3 +371,21 @@ button:hover {
     }
 }
 }
+/* botão para animais encontrados */
+.bottom-left-button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #7f0fca;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.bottom-left-button:hover {
+    background-color: #5d0d99;
+}

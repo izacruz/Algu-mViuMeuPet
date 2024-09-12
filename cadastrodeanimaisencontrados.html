@@ -3,19 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animais encontrados</title>
+    <title>Animais Perdidos</title>
     <link rel="stylesheet" href="estilo.css">
-    <a href="alguemviumeupet.html" class="back-home-button">Voltar para Início</a>
+    <style>
+         .bottom-left-button {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background-color: #7f0fca;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
 
+        .bottom-left-button:hover {
+            background-color: #5d0d99;
+
+            .bottom-right-button:hover {
+                background-color: #5d0d99;
+        }
+    </style>
+    <script>
+        function showConfirmationMessage() {
+            var form = document.getElementById("lostPetForm");
+            var confirmationMessage = document.getElementById("confirmationMessage");
+
+            form.style.display = "none";
+            confirmationMessage.style.display = "block";
+        }
+    </script>
 
 </head>
 <body>
     <header>
-        <h1>Cadastro de Animal Encontrado</h1>
+        <h1>Cadastro de Animal Perdido</h1>
     </header>
     
     <div class="container">
-        <form action="#">
+        <form id="lostPetForm" onsubmit="showConfirmationMessage(); return false;">
             <label for="situacao">Situação:</label>
             <select id="situacao" name="situacao">
                 <option value="perdido">Perdido</option>
@@ -41,8 +70,15 @@
     
             <input type="submit" value="Próximo Passo">
         </form>
-    </div>
     
-    
+        <div id="confirmationMessage" class="confirmation-message">
+            <h2>Cadastro realizado com sucesso!</h2>
+            <p>Seu animal foi cadastrado. Em breve ele estará disponível em nossa plataforma.</p>
+            <a href="animais encontrados.html" class="back-home-button">Veja os animais perdidos</a>
+
+        </div>
+        <a href="alguemviumeupet.html" class="back-home-button">Voltar para Início</a>
+
+        
     </body>
     </html>

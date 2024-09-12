@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animais Encontrados</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #dfb3f3;
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #7f0fca;
+            padding: 20px;
+            color: white;
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        h1 {
+            margin-top: 20px;
+            color: #770086;
+        }
+
+        .container {
+            padding: 30px;
+        }
+
+        .pets-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .pet-card {
+            background-color: #c08fd6;
+            border: 2px solid #040105;
+            border-radius: 15px;
+            width: 200px;
+            padding: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+
+        .pet-card:hover {
+            transform: scale(1.05);
+        }
+
+        .pet-card img {
+            width: 100%;
+            height: 180px;
+            border-radius: 15px;
+        }
+
+        .pet-name {
+            margin-top: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #181618;
+        }
+
+        .footer {
+            margin-top: 30px;
+            background-color: #633e6d;
+            color: white;
+            padding: 15px;
+        }
+
+        /* Botão no canto inferior esquerdo */
+        .bottom-left-button {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background-color: #7f0fca;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .bottom-left-button:hover {
+            background-color: #5d0d99;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Animais Encontrados
+    </header>
+    
+    <h1>Ajude a reencontrar os tutores desses pets!</h1>
+    
+    <div class="container">
+        <div class="pets-grid">
+            <!-- Primeiro Pet -->
+            <div class="pet-card">
+                <img src="Thor.jpeg" alt="Cachorro 1">
+                <p class="pet-name">Thor - Encontrado em São Paulo</p>
+            </div>
+    
+            <!-- Segundo Pet -->
+            <div class="pet-card">
+                <img src="Nico.jpeg" alt="Cachorro 2">
+                <p class="pet-name">Nico - Encontrado no Rio de Janeiro</p>
+            </div>
+    
+            <!-- Terceiro Pet -->
+            <div class="pet-card">
+                <img src="Tico e Tica.jpeg" alt="Cachorro 3">
+                <p class="pet-name">Tico e Tica - Encontrados em Curitiba</p>
+            </div>
+    
+            <!-- Quarto Pet -->
+            <div class="pet-card">
+                <img src="Penelope.jpeg" alt="Cachorro 4">
+                <p class="pet-name">Penelope - Encontrada em Belo Horizonte</p>
+            </div>
+    
+            <!-- Quinto Pet -->
+            <div class="pet-card">
+                <img src="Lilica.jpeg" alt="Cachorro 5">
+                <p class="pet-name">Lilica - Encontrada em Porto Alegre</p>
+            </div>
+    
+            <!-- Sexto Pet -->
+            <div class="pet-card">
+                <img src="Nala.avif" alt="Cachorro 6">
+                <p class="pet-name">Nala - Encontrada em Salvador</p>
+            </div>
+        </div>
+    </div>
+    
+    <a href="animais encontrados.html" class="bottom-left-button">Próxima Página</a>
+
+</body>
+</html>
